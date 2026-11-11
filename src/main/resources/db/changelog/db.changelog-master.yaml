@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-tables
+      author: system
+      changes:
+        - sqlFile:
+            path: db/changelog/sql/001-create-tables.sql
+            relativeToChangelogFile: true
+            endDelimiter: ;
+            splitStatements: true
+
+  - changeSet:
+      id: 002-add-indexes
+      author: system
+      changes:
+        - sqlFile:
+            path: db/changelog/sql/002-add-indexes.sql
+            relativeToChangelogFile: true
+            endDelimiter: ;
+            splitStatements: true
+
+  - changeSet:
+      id: 003-add-triggers
+      author: system
+      changes:
+        - sqlFile:
+            path: db/changelog/sql/003-add-triggers.sql
+            relativeToChangelogFile: true
+            endDelimiter: ;
+            splitStatements: true

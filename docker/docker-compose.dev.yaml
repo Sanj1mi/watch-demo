@@ -1,0 +1,13 @@
+#   docker compose -f docker/docker-compose.yaml -f docker/docker-compose.dev.yaml up -d --build
+name: watch-demo
+
+services:
+  backend:
+    ports:
+      - "1488:1488"
+    environment:
+      SPRING_JPA_SHOW_SQL: "true"
+      JAVA_TOOL_OPTIONS: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"
+
+  frontend:
+    profiles: ["disabled"]

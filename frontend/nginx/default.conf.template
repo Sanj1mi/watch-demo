@@ -1,0 +1,35 @@
+server {
+    listen 8080;
+    server_name _;
+    server_tokens off;
+
+    root /usr/share/nginx/html;
+    index index.html;
+
+    gzip on;
+    gzip_types text/css application/javascript application/json image/svg+xml;
+
+    # API -> Spring Boot (сессионная кука админа проходит как есть)
+    location /api/ {
+        proxy_pass ${BACKEND_URL};
+        proxy_set_header Host $http_host;  # с портом: иначе Origin != Host и Spring отвечает 403 (CORS)
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 60s;
+    }
+
+    # хешированные ассеты Vite можно кэшировать надолго
+    location /assets/ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        include /etc/nginx/snippets/security-headers.conf;
+        try_files $uri =404;
+    }
+
+    location / {
+        expires -1;   # Cache-Control: no-cache для index.html
+        include /etc/nginx/snippets/security-headers.conf;
+        try_files $uri /index.html;
+    }
+}

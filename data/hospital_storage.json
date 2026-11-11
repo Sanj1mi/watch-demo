@@ -1,0 +1,53 @@
+[ "java.util.ArrayList", [ {
+  "@class" : "com.unik.watchdemo2.model.entity.Patient",
+  "id" : "a228c77f-8fa7-4ec5-8e56-817f0ffc5577",
+  "firstName" : "dwdqw",
+  "lastName" : "dqwddqw",
+  "age" : 11,
+  "department" : "1",
+  "diagnosis" : "",
+  "insuranceNum" : "",
+  "fullName" : "dwdqw dqwddqw"
+}, {
+  "@class" : "com.unik.watchdemo2.model.entity.Doc",
+  "id" : "71a1e995-edea-4961-9e0d-fb39f9fc990f",
+  "firstName" : "wedfrgtty",
+  "lastName" : "wdefergtrhy",
+  "age" : 18,
+  "department" : "6",
+  "specialty" : "",
+  "license" : "",
+  "salary" : null,
+  "fullName" : "wedfrgtty wdefergtrhy"
+}, {
+  "@class" : "com.unik.watchdemo2.model.entity.Patient",
+  "id" : "3bbc7503-819a-4b79-9146-427910d33634",
+  "firstName" : "wqdqwwdq",
+  "lastName" : "dqwdqwwd",
+  "age" : 13,
+  "department" : "2",
+  "diagnosis" : "",
+  "insuranceNum" : "",
+  "fullName" : "wqdqwwdq dqwdqwwd"
+}, {
+  "@class" : "com.unik.watchdemo2.model.entity.Doc",
+  "id" : "414edf42-8c95-4a80-b5a8-e9e2111215f6",
+  "firstName" : "wdqdwqwdq",
+  "lastName" : "dqwdqwdwq",
+  "age" : 11,
+  "department" : "1",
+  "specialty" : "1",
+  "license" : "11",
+  "salary" : [ "java.math.BigDecimal", 1111 ],
+  "fullName" : "wdqdwqwdq dqwdqwdwq"
+}, {
+  "@class" : "com.unik.watchdemo2.model.entity.Patient",
+  "id" : "b9350d21-cf92-4e3f-815a-bc8fe97c88ea",
+  "firstName" : "dqwwqddqww",
+  "lastName" : "dqwdwqdqw",
+  "age" : 6,
+  "department" : "6",
+  "diagnosis" : "",
+  "insuranceNum" : "",
+  "fullName" : "dqwwqddqww dqwdwqdqw"
+} ] ]

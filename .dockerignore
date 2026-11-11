@@ -1,0 +1,14 @@
+.gradle
+.idea
+.settings
+bin
+build
+frontend
+docker
+sql
+*.md
+.git
+.classpath
+.factorypath
+.project
+*.fish

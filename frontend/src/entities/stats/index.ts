@@ -1,0 +1,5 @@
+export type { Statistics, StatValues, DeptStats } from './model/types'
+export { splitStats } from './model/lib'
+export { statsApi } from './api/statsApi'
+export { StatsGrid } from './ui/StatsGrid'
+export { DetailedStats } from './ui/DetailedStats'
